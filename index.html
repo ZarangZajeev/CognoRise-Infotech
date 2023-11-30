@@ -3,54 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6a07d98646.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
-<body>
-    <div class="main-body">
-        <div class="clac">
-            <div class="output">
-                <input type="text" id="screen">
-
+<body class="vh-100 bg-black">
+    <section class="container d-flex justify-content-center vh-100 align-items-center">
+        <div class="border border-0 rounded-3 bg-dark" style="width: 28%;">
+            <div class="content-top">
+                <div class="text-end text-box">
+                    <input type="text" name="" id="outScreen" class="box text-end form-control bg-transparent text-white fs-2">
+                </div>
             </div>
-            <div class="buttons">
-                <div class="row">
-                    <button onclick="ClearAll()" class="btn">C</button>
-                    <button onclick="buttonclick('%')" class="btn">%</button>
-                    <button onclick="BackSpace()" id="bcs"><i class="material-icons">backspace</i></button>
-                    <button onclick="buttonclick('/')" class="btn">/</button>
-                </div>
-                <div class="row">
-                    <button onclick="buttonclick(7)" class="btn">7</button>
-                    <button onclick="buttonclick(8)" class="btn">8</button>
-                    <button onclick="buttonclick(9)" class="btn">9</button>
-                    <button onclick="buttonclick('*')" class="btn">X</button>
-                </div>
-                <div class="row">
-                    <button onclick="buttonclick(4)" class="btn">4</button>
-                    <button onclick="buttonclick(5)" class="btn">5</button>
-                    <button onclick="buttonclick(6)" class="btn">6</button>
-                    <button onclick="buttonclick('-')" class="btn">-</button>
-
-                </div>
-                <div class="row">
-                    <button onclick="buttonclick(1)" class="btn">1</button>
-                    <button onclick="buttonclick(2)" class="btn">2</button>
-                    <button onclick="buttonclick(3)" class="btn">3</button>
-                    <button onclick="buttonclick('+')" class="btn">+</button>
-
-                </div>
-                <div class="row">
-                    <button onclick="buttonclick('00')" class="btn">00</button>
-                    <button onclick="buttonclick(0)" class="btn">0</button>
-                    <button onclick="buttonclick('.')" class="btn">.</button>
-                    <button onclick="EqualClick()" class="btn">=</button>
-
+            <div class="line"></div>
+            <div class="content_bottom">
+                <div class="bottom_content">
+                    <div class="c_1">
+                        <button onclick="disClear()" class="oparation-g btn btn-dark">C</button>
+                        <button onclick="backClick()" class="oparation-g btn btn-dark"><i class="fa-solid fa-delete-left"></i></button>
+                        <button onclick="numClick('%')" class="oparation-g btn btn-dark">%</button>
+                        <button onclick="numClick('/')" class="oparation btn btn-dark"><i class="fa-solid fa-divide"></i></button>
+                    </div>
+                    <div class="c_1">
+                        <button onclick="numClick(7)" class="btn btn-dark">7</button>
+                        <button onclick="numClick(8)" class="btn btn-dark">8</button>
+                        <button onclick="numClick(9)" class="btn btn-dark">9</button>
+                        <button onclick="numClick('*')" class="oparation btn btn-dark"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <div class="c_1">
+                        <button onclick="numClick(4)" class="btn btn-dark">4</button>
+                        <button onclick="numClick(5)" class="btn btn-dark">5</button>
+                        <button onclick="numClick(6)" class="btn btn-dark">6</button>
+                        <button onclick="numClick('-')" class="oparation btn btn-dark"><i class="fa-solid fa-minus"></i></button>
+                    </div>
+                    <div class="c_1">
+                        <button onclick="numClick(1)" class="btn btn-dark">1</button>
+                        <button onclick="numClick(2)" class="btn btn-dark">2</button>
+                        <button onclick="numClick(3)" class="btn btn-dark">3</button>
+                        <button onclick="numClick('+')"  class="oparation btn btn-dark">+</button>
+                    </div>
+                    <div class="c_1">
+                        <button onclick="numClick('00')" class="btn btn-dark">00</button> 
+                        <button onclick="numClick(0)" class="btn btn-dark">0</button>
+                        <button onclick="numClick('.')" class="btn btn-dark"><i class="fa-solid fa-circle"></i></button>
+                        <button onclick="equal()" class="btn btn_answ btn-dark"><i class="fa-solid fa-equals"></i></button>     
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </body>
 </html>

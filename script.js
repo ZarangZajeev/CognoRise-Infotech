@@ -1,20 +1,28 @@
-function buttonclick(val)
-{
-    document.getElementById("screen").value+=val
+// ------ operation display view ----------
+function numClick(val){
+    document.querySelector("#outScreen").value+=val;
+    // outScreen.value+=val;
 }
 
-function ClearAll()
-{
-    document.getElementById("screen").value=""
+
+
+
+//  -------- Clear button (disClear()) ----------------
+function disClear(){
+    document.querySelector("#outScreen").value ="";
+    // outScreen.value="";
 }
-function EqualClick()
-{
-    var text=document.getElementById("screen").value
-    var result=eval(text)
-    document.getElementById("screen").value=result
+
+
+    // -------- delete button (backClick()) --------------
+function backClick(){
+    document.querySelector("#outScreen").value =document.querySelector("#outScreen").value.toString().slice(0,-1);
 }
-function BackSpace()
-{
-    var rekensom=document.getElementById("screen").value;
-    document.getElementById("screen").value=rekensom.substring(0,rekensom.length-1);
+
+
+//  ------------- equal button (equal()) ------------------
+function equal(){
+    var text=document.querySelector("#outScreen").value;
+    var res=eval(text);
+    document.querySelector('#outScreen').value=res;
 }
